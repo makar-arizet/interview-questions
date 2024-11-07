@@ -1,0 +1,80 @@
+#popup-wrapper {
+  display: none;
+  height:100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &.active {
+    display: flex;
+  }
+
+  >div {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+
+  #popup {
+    background-color: royalblue;
+    border-radius: 12px;
+    color: #eeeeee;
+    margin: auto;
+    padding: 12px 40px 40px;
+    position: relative;
+    width: 400px;
+
+    header {
+      align-items: baseline;
+      display: flex;
+      font-size: 30px;
+      font-weight: 700;
+      justify-content: space-between;
+      line-height: 0;
+      margin-bottom: 20px;
+      padding: 0 4px;
+
+      #popup-close {
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+        height: 32px;
+        line-height: 0;
+        padding: 10px 8px;
+        transition: .3s;
+        width: 32px;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+    section > * {
+      display: flex;
+      font-size: 20px;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      width: 100%;
+
+      &.url {
+        justify-content: start;
+
+        a {
+          flex: 1;
+          text-align: center;
+        }
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+}
